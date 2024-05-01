@@ -5,6 +5,7 @@
  */
 
 const authController = require("../controllers/auth.controller");
+const authMw = require("../middlewares/auth.mw");
 const authMiddleware = require("../middlewares/auth.mw")
 
 
@@ -15,5 +16,5 @@ module.exports = (app) =>{
      * Route for 
      * POST localhost:8080/ecom/api/v1/auth/signin
      */
-    app.post("/ecom/api/v1/auth/signin", authController.signin)
+    app.post("/ecom/api/v1/auth/signin",[authMw.verifySignInBody], authController.signin)
 }
