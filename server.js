@@ -65,6 +65,7 @@ require("./routes/auth.routes")(app) //calling routes and passing app object
 //the controller and my controller knows abt my models 
 //saari cheeze ek doosre se connected hai
 
+require("./routes/category.route")(app)
 
 
 /*

@@ -16,5 +16,5 @@ module.exports = (app) =>{
      * Route for 
      * POST localhost:8080/ecom/api/v1/auth/signin
      */
-    app.post("/ecom/api/v1/auth/signin",[authMw.verifySignInBody], authController.signin)
+    app.post("/ecom/api/v1/auth/signin",[authMiddleware.verifySignInBody], authController.signin)
 }
